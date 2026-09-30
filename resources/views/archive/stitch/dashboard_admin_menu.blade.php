@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-highest": "#dae2fd", "on-error": "#ffffff", primary: "#1E3A8A", "on-primary": "#ffffff", "surface-bright": "#faf8ff", "surface-variant": "#dae2fd", "on-tertiary": "#ffffff", "surface-container-high": "#e2e7ff", "outline-variant": "#bcc9c6", "primary-fixed-dim": "#6bd8cb", "on-secondary-container": "#1d3989", "inverse-primary": "#6bd8cb", "tertiary-container": "#a36700", "on-primary-fixed": "#00201d", background: "#faf8ff", "secondary-fixed": "#dce1ff", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "inverse-surface": "#283044", "on-surface-variant": "#3d4947", "surface-dim": "#d2d9f4", "on-background": "#131b2e", "primary-container": "#008378", error: "#ba1a1a", "on-primary-container": "#f4fffc", "primary-fixed": "#89f5e7", "on-primary-fixed-variant": "#005049", "on-surface": "#131b2e", "secondary-fixed-dim": "#b6c4ff", "secondary-container": "#8fa7fe", "tertiary-fixed": "#ffddb8", outline: "#6d7a77", secondary: "#4059aa", "error-container": "#ffdad6", tertiary: "#825100", surface: "#faf8ff", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#264191", "surface-tint": "#006a61", "on-tertiary-container": "#fffbff", "on-error-container": "#93000a", "on-tertiary-fixed": "#2a1700", "on-secondary-fixed": "#00164e", "on-tertiary-fixed-variant": "#653e00", "surface-container": "#eaedff", "inverse-on-surface": "#eef0ff", "tertiary-fixed-dim": "#ffb95f", "background-light": "#f6f6f8", "background-dark": "#121620"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "1rem", "space-lg": "1.25rem", "gutter-desktop": "1.5rem", margin: "1rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-xl": "2rem", "space-xs": "0.25rem"}, fontFamily: {"label-sm": ["Inter"], "headline-lg": ["Newsreader"], "title-md": ["Inter"], "display-lg": ["Newsreader"], "code-md": ["Inter"], "headline-md": ["Newsreader"], "body-lg": ["Inter"], "display-lg-mobile": ["Newsreader"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Newsreader"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Public Sans"]}, fontSize: {"label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600"}], "code-md": ["12px", {lineHeight: "18px", fontWeight: "500"}], "headline-md": ["22px", {lineHeight: "30px", fontWeight: "500"}], "body-lg": ["15px", {lineHeight: "24px", fontWeight: "400"}], "display-lg-mobile": ["30px", {lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["13px", {lineHeight: "20px", fontWeight: "400"}], "body-sm": ["12px", {lineHeight: "18px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600"}], "headline-sm": ["18px", {lineHeight: "26px", fontWeight: "500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r-2 border-outline-variant z-50 flex flex-col"><div class="h-16 px-gutter-desktop border-b-2 border-outline-variant flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">CMS Navigation</span></div><span class="font-code-md text-code-md px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-semibold">v2.4</span></div><nav class="flex-1 overflow-y-auto p-space-md space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[2px_2px_0px_#131b2e] border-2 border-on-surface"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="dashboard-ikhtisar" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard Ikhtisar</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kontrol-navigasi-dan-menu-header" href="#"><span class="material-symbols-outlined text-[18px]">menu_open</span><span class="font-body-md text-body-md">Kontrol Navigasi &amp; Menu</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-beranda" href="#"><span class="material-symbols-outlined text-[18px]">home_work</span><span class="font-body-md text-body-md">Kelola Beranda</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-profil-dan-kurikulum" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span class="font-body-md text-body-md">Kelola Profil &amp; Kurikulum</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-fasilitas" href="#"><span class="material-symbols-outlined text-[18px]">apartment</span><span class="font-body-md text-body-md">Kelola Fasilitas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-prestasi" href="#"><span class="material-symbols-outlined text-[18px]">military_tech</span><span class="font-body-md text-body-md">Kelola Prestasi</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-ppdb-2025-2026" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span class="font-body-md text-body-md">Kelola PPDB 2025/2026</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="kelola-kontak-dan-informasi" href="#"><span class="material-symbols-outlined text-[18px]">contact_support</span><span class="font-body-md text-body-md">Kelola Kontak &amp; Informasi</span></a><div class="pt-space-md mt-space-md border-t border-outline-variant"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent" data-path="log-aktivitas-dan-hak-akses" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span class="font-body-md text-body-md">Log &amp; Hak Akses</span></a></div></nav><div class="p-space-md border-t-2 border-outline-variant bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest border border-outline-variant"><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Sistem Server</span><span class="font-code-md text-code-md text-on-surface font-semibold">SMAM-SRV01</span></div><span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest border-b-2 border-outline-variant z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><img alt="Minimalist academic crest logo for SMA Madani Al Aziziyah in deep sapphire navy and teal, geometric emblem with book and beacon motif.. Brand logo. - Primary color: #0d9488
+- Font: newsreader
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VP4pHDm9UruNlxv_zESUBQIjI_HX_YGkiENUOZ_01mx3KU9V7P2VAmvVz_TIe8uC14-ktO74jgwqkHLaQApYwI0Dv2RlVuGLw7ywmnmG3SBNHnmhkjGKgQ44ixeI26oJHsOs3CokO_6Fe3qAtc2TqSlucjZf4Y2Ep_-b9B6Li2LT71RyFhjuWFEWDWIQVSxU8cPZhZ5GV09Qy8c9PWZ-uyjTtKmdLJLenIB1mi3tZ-lGHe61YPE2G7kiw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">SIM-Madani Terpadu</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Portal Admin Pusat</span></div></div><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg border-2 border-outline text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm font-semibold" href="#" target="_blank"><span class="material-symbols-outlined text-[16px]">open_in_new</span>Lihat Website Publik (Frontend)</a><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container-high border border-outline-variant"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-code-md text-code-md text-on-surface-variant">Online 99.98%</span><span class="text-outline font-code-md text-code-md">|</span><span class="font-code-md text-code-md font-semibold text-secondary">SMAM-SRV01</span></div><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface relative border border-transparent hover:border-outline-variant transition-all" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-md pl-space-md border-l-2 border-outline-variant"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[2px_2px_0px_#131b2e]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Ust. H. Fauzan, S.Pd.I</span><span class="font-label-sm text-label-sm text-primary font-semibold">Super Admin</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen p-gutter-desktop"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Section / Workspace Header -->
+<div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-primary text-on-primary font-code-md text-code-md font-semibold uppercase tracking-wider">NAV-CTRL // R-2025</span>
+<span class="font-code-md text-code-md text-on-surface-variant">Live Layout Engine</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Manajemen Struktur Menu Header &amp; Tata Letak Navbar</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Kelola hierarki menu navigasi publik, tautan eksternal, visibilitas tombol CTA, dan pengaturan responsif.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-start xl:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md uppercase tracking-wider border-2 border-outline-variant hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#131b2e] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+        Reset ke Default
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider border-2 border-on-surface hover:bg-secondary-container transition-all shadow-[2px_2px_0px_#131b2e] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" type="button">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+        Tambah Menu Baru
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider border-2 border-on-surface hover:bg-primary-container transition-all shadow-[2px_2px_0px_#131b2e] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+        Simpan Susunan Navigasi
+      </button>
+</div>
+</div>
+<!-- Real-time Navbar Interactive Live Preview Canvas -->
+<div class="rounded-xl bg-surface-container-lowest border-2 border-outline-variant shadow-[3px_3px_0px_#131b2e] overflow-hidden">
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-low border-b-2 border-outline-variant">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error inline-block border border-on-surface"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim inline-block border border-on-surface"></span>
+<span class="w-3 h-3 rounded-full bg-primary inline-block border border-on-surface"></span>
+<span class="font-code-md text-code-md uppercase font-semibold text-on-surface-variant ml-space-xs">Pratinjau Langsung Navbar Publik (Frontend Simulation)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md">Viewport: 1440px Desktop</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">devices</span></button>
+</div>
+</div>
+<!-- Live Broadcast Bar Simulation -->
+<div class="bg-secondary text-on-secondary px-space-md py-1.5 flex items-center justify-between text-body-sm font-body-sm border-b border-outline-variant">
+<div class="flex items-center gap-space-xs mx-auto text-center truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">campaign</span>
+<span class="font-semibold tracking-wide">PENGUMUMAN SELEKSI PPDB 2025/2026:</span>
+<span class="text-secondary-fixed">Verifikasi berkas gelombang 1 dibuka sampai 28 Februari 2025.</span>
+<a class="underline font-semibold text-white ml- space-xs hover:text-secondary-fixed flex items-center" href="#">Cek Status <span class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+</div>
+</div>
+<!-- Live Navbar Simulation -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<img alt="Logo SMA Madani Al Aziziyah" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VP4pHDm9UruNlxv_zESUBQIjI_HX_YGkiENUOZ_01mx3KU9V7P2VAmvVz_TIe8uC14-ktO74jgwqkHLaQApYwI0Dv2RlVuGLw7ywmnmG3SBNHnmhkjGKgQ44ixeI26oJHsOs3CokO_6Fe3qAtc2TqSlucjZf4Y2Ep_-b9B6Li2LT71RyFhjuWFEWDWIQVSxU8cPZhZ5GV09Qy8c9PWZ-uyjTtKmdLJLenIB1mi3tZ-lGHe61YPE2G7kiw"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">SMA MADANI AL AZIZIYAH</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Islamic Boarding &amp; STEM School</span>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-space-lg">
+<a class="font-body-md text-body-md text-primary font-semibold flex items-center gap-0.5" href="#">Beranda</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+          Profil &amp; Kurikulum <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+          Fasilitas <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+          Prestasi <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="#">
+          Penerimaan (PPDB)
+          <span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2 rounded">Gelombang 1</span>
+</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+          Kontak <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</a>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold border-2 border-on-surface shadow-[2px_2px_0px_#131b2e]" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+          Portal Akademik
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Tree Manager & Editor Workspace (2-Column Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: Navigation Menu Reorderable List (col-span-7) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded-xl border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex items-center justify-between pb-space-sm border-b-2 border-outline-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">reorder</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Daftar Urutan Menu Navbar</h2>
+<span class="font-code-md text-code-md text-on-surface-variant">Seret atau gunakan tombol panah untuk menata urutan</span>
+</div>
+</div>
+<span class="font-code-md text-code-md px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">6 Item Utama</span>
+</div>
+<!-- Menu Items List -->
+<div class="flex flex-col gap-space-sm" id="menu-tree-container">
+<!-- Item 1: Beranda -->
+<div class="p-space-sm rounded-lg border-2 border-outline-variant hover:border-on-surface bg-surface-container-low flex items-center justify-between transition-all group">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-outline hover:text-on-surface flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">1</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Beranda</span>
+<span class="font-code-md text-code-md text-primary bg-surface-container-highest px-1.5 py-0.2 rounded">/</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant">Wajib Aktif</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Single Route • Desktop: Ya • Mobile: Ya</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+</div>
+</div>
+<!-- Item 2: Profil & Kurikulum -->
+<div class="p-space-sm rounded-lg border-2 border-outline-variant hover:border-on-surface bg-surface-container-lowest flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-outline hover:text-on-surface flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">2</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Profil &amp; Kurikulum</span>
+<span class="font-code-md text-code-md text-secondary bg-surface-container-high px-1.5 py-0.2 rounded">/profil-kurikulum</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container-high text-secondary font-semibold">4 Submenu</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Dropdown Mega • Desktop: Ya • Mobile: Ya</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Nested Submenu items -->
+<div class="ml-11 pl-space-sm border-l-2 border-outline-variant flex flex-col gap-1 pt-1">
+<div class="flex items-center justify-between py-0.5 px-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface">↳ Visi, Misi &amp; Falsafah</span>
+<span class="font-code-md text-code-md text-on-surface-variant">/profil-kurikulum#visi-misi</span>
+</div>
+<div class="flex items-center justify-between py-0.5 px-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface">↳ Legalitas &amp; Akreditasi BAN-S/M</span>
+<span class="font-code-md text-code-md text-on-surface-variant">/profil-kurikulum#legalitas</span>
+</div>
+<div class="flex items-center justify-between py-0.5 px-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface">↳ Trilogi Kurikulum Madani</span>
+<span class="font-code-md text-code-md text-on-surface-variant">/profil-kurikulum#kurikulum</span>
+</div>
+<div class="flex items-center justify-between py-0.5 px-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface">↳ Dewan Asatidz &amp; Muallim</span>
+<span class="font-code-md text-code-md text-on-surface-variant">/profil-kurikulum#dewan-guru</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Fasilitas -->
+<div class="p-space-sm rounded-lg border-2 border-outline-variant hover:border-on-surface bg-surface-container-lowest flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-outline hover:text-on-surface flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">3</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Fasilitas</span>
+<span class="font-code-md text-code-md text-secondary bg-surface-container-high px-1.5 py-0.2 rounded">/fasilitas</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container-high text-secondary font-semibold">5 Submenu</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Dropdown Grid • Desktop: Ya • Mobile: Ya</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<div class="ml-11 pl-space-sm border-l-2 border-outline-variant flex flex-wrap gap-1.5 pt-1">
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface">Lab Sains &amp; Komputer</span>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface">Asrama Santri Terpisah</span>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface">Masjid Al Aziziyah</span>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface">Gedung Olahraga &amp; Panahan</span>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface">Maktabah Digital</span>
+</div>
+</div>
+<!-- Item 4: Prestasi -->
+<div class="p-space-sm rounded-lg border-2 border-outline-variant hover:border-on-surface bg-surface-container-lowest flex items-center justify-between transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-outline hover:text-on-surface flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">4</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Prestasi</span>
+<span class="font-code-md text-code-md text-secondary bg-surface-container-high px-1.5 py-0.2 rounded">/prestasi</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container-high text-secondary font-semibold">3 Submenu</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Dropdown Standar • Desktop: Ya • Mobile: Ya</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Item 5: Penerimaan (PPDB) (ACTIVE/SELECTED ITEM IN EDITOR) -->
+<div class="p-space-sm rounded-lg border-2 border-primary bg-primary/5 flex items-center justify-between transition-all shadow-[2px_2px_0px_#00685f]">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-primary flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-bold">5</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-primary">Penerimaan (PPDB)</span>
+<span class="font-code-md text-code-md text-primary bg-primary-fixed px-1.5 py-0.2 rounded font-bold">/ppdb</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-tertiary text-on-tertiary font-bold uppercase tracking-wider">Gelombang 1 Aktif</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Highlighted Action Route • Desktop: Ya • Mobile: Ya • Sedang Dipilih</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-2 py-0.5 rounded font-semibold uppercase">Aktif Diedit</span>
+<button class="p-1 rounded hover:bg-primary/20 text-primary" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+<!-- Item 6: Kontak -->
+<div class="p-space-sm rounded-lg border-2 border-outline-variant hover:border-on-surface bg-surface-container-lowest flex items-center justify-between transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="cursor-grab text-outline hover:text-on-surface flex items-center">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</div>
+<span class="font-code-md text-code-md w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-bold text-on-surface">6</span>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Kontak</span>
+<span class="font-code-md text-code-md text-secondary bg-surface-container-high px-1.5 py-0.2 rounded">/kontak</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-label-sm bg-surface-container-high text-secondary font-semibold">3 Submenu</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tipe: Dropdown Standar • Desktop: Ya • Mobile: Ya</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Struktur pohon menu tersinkronisasi otomatis dengan Sitemap XML institusi.</span>
+</div>
+<span class="font-code-md text-code-md font-semibold text-primary">Status: Valid (Tree Verified)</span>
+</div>
+</div>
+<!-- RIGHT PANEL: Selected Menu Property Editor (col-span-5) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded-xl border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex items-center justify-between pb-space-sm border-b-2 border-outline-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Editor Properti Menu Terpilih</h2>
+<span class="font-code-md text-code-md text-on-surface-variant">Posisi: 5 • ID: ITEM-PPDB-2025</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary font-code-md text-code-md font-bold">MODE EDIT</span>
+</div>
+<!-- Form Configuration Fields -->
+<div class="flex flex-col gap-space-md">
+<!-- Field 1: Label Nama Menu (Dual Language) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Label Menu (Indonesia) *</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]" type="text" value="Penerimaan (PPDB)"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Label Menu (English)</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]" type="text" value="Admissions (PPDB)"/>
+</div>
+</div>
+<!-- Field 2: Target URL / Route Internal -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">URL Target / Route Internal *</label>
+<div class="relative flex items-center">
+<span class="absolute left-space-sm font-code-md text-code-md text-on-surface-variant">https://madani.sch.id</span>
+<input class="w-full h-[38px] pl-44 pr-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-code-md text-code-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]" type="text" value="/ppdb"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gunakan tautan lokal atau format eksternal berawalan https://</span>
+</div>
+<!-- Field 3: Otorisasi Akses -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Otorisasi &amp; Visibilitas Hak Akses</label>
+<select class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]">
+<option selected="">Publik (Semua Pengunjung Website)</option>
+<option>Khusus Calon Santri / Pendaftar Terdaftar</option>
+<option>Khusus Civitas Akademika (Guru &amp; Staf)</option>
+</select>
+</div>
+<!-- Field 4: Badge Label Tambahan & Styling -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Teks Badge Tambahan</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]" type="text" value="Gelombang 1 Aktif"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Warna Highlight Badge</label>
+<select class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none shadow-[1px_1px_0px_#131b2e]">
+<option selected="">Amber / Emas (Tertiary)</option>
+<option>Emerald Teal (Primary)</option>
+<option>Navy Sapphire (Secondary)</option>
+<option>Crimson Red (Urgent / Hot)</option>
+</select>
+</div>
+</div>
+<!-- Field Toggles -->
+<div class="flex flex-col gap-space-sm pt-space-xs border-t border-outline-variant">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low border border-outline-variant">
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Tampilkan di Header Desktop</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Muncul pada bilah menu navigasi layar lebar</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low border border-outline-variant">
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Tampilkan di Mobile Drawer Menu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Muncul saat hamburger menu dibuka di ponsel &amp; tablet</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low border border-outline-variant">
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Buka di Tab Baru (External Link)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Menambahkan atribut target="_blank" rel="noopener"</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Editor Action Footer -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-outline-variant">
+<button class="px-space-md py-1.5 rounded bg-surface-container-lowest text-on-surface border-2 border-outline-variant font-label-md text-label-md hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#131b2e] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" type="button">
+            Batal
+          </button>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary border-2 border-on-surface font-label-md text-label-md hover:bg-primary-container transition-all shadow-[2px_2px_0px_#131b2e] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Terapkan Perubahan Menu
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Action Buttons, Topbar & Brand Identity Section (3 Bento Grid Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- CARD 1: Tombol CTA Kanan Header -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-md rounded-xl border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_button</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tombol CTA Kanan Header</h3>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary uppercase">Aktif</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Teks Tombol Utama</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none" type="text" value="Portal Akademik / Masuk"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Tautan URL Sasaran</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-code-md text-code-md text-on-surface focus:border-primary focus:outline-none" type="text" value="/login-portal"/>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Tema Tombol</label>
+<select class="h-[38px] px-space-xs rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none">
+<option selected="">Hijau Emerald</option>
+<option>Deep Navy</option>
+<option>Outline Tactical</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Ikon Tombol</label>
+<select class="h-[38px] px-space-xs rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none">
+<option selected="">Gembok (lock)</option>
+<option>Kunci (key)</option>
+<option>Panah (arrow_forward)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface-variant">Visibilitas Header: 100%</span>
+<button class="px-space-md py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:bg-secondary-container transition-all" type="button">Simpan CTA</button>
+</div>
+</div>
+<!-- CARD 2: Emergency / Broadcast Banner Atas -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-md rounded-xl border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Emergency / Broadcast Banner</h3>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Teks Pengumuman Banner</label>
+<textarea class="p-space-xs rounded bg-surface-container-lowest border-2 border-outline-variant font-body-sm text-body-sm text-on-surface focus:border-primary focus:outline-none" rows="2">PENGUMUMAN SELEKSI PPDB 2025/2026: Verifikasi berkas gelombang 1 dibuka sampai 28 Februari 2025.</textarea>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Tautan Verifikasi Berkas (URL)</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-code-md text-code-md text-on-surface focus:border-primary focus:outline-none" type="text" value="/ppdb/verifikasi-jadwal"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Warna Background Banner</label>
+<select class="h-[38px] px-space-xs rounded bg-surface-container-lowest border-2 border-outline-variant font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none">
+<option selected="">Deep Sapphire Navy (#4059aa)</option>
+<option>Emerald Accent (#00685f)</option>
+<option>Amber Alert (#825100)</option>
+<option>Crimson Emergency (#ba1a1a)</option>
+</select>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface-variant">Live di Header Atas</span>
+<button class="px-space-md py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:bg-secondary-container transition-all" type="button">Update Banner</button>
+</div>
+</div>
+<!-- CARD 3: Logo & Identitas Header -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-md rounded-xl border-2 border-outline-variant shadow-[2px_2px_0px_#131b2e]">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Logo &amp; Identitas Header</h3>
+</div>
+<span class="font-code-md text-code-md text-on-surface-variant">ASSET #22</span>
+</div>
+<div class="flex items-center gap-space-md p-space-sm rounded bg-surface-container-low border border-outline-variant">
+<img alt="Logo Identitas SMA Madani Al Aziziyah" class="w-16 h-16 object-contain rounded bg-white p-1 border border-outline-variant shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1VP4pHDm9UruNlxv_zESUBQIjI_HX_YGkiENUOZ_01mx3KU9V7P2VAmvVz_TIe8uC14-ktO74jgwqkHLaQApYwI0Dv2RlVuGLw7ywmnmG3SBNHnmhkjGKgQ44ixeI26oJHsOs3CokO_6Fe3qAtc2TqSlucjZf4Y2Ep_-b9B6Li2LT71RyFhjuWFEWDWIQVSxU8cPZhZ5GV09Qy8c9PWZ-uyjTtKmdLJLenIB1mi3tZ-lGHe61YPE2G7kiw"/>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Logo Resmi Lembaga</span>
+<span class="font-code-md text-code-md text-on-surface-variant">Format: SVG/PNG • 96x96px</span>
+<button class="self-start text-primary text-body-sm font-semibold underline hover:text-primary-container" type="button">Unggah Logo Baru</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Teks Brand Institusi</label>
+<input class="h-[38px] px-space-sm rounded bg-surface-container-lowest border-2 border-outline-variant font-headline-sm text-headline-sm text-on-surface focus:border-primary focus:outline-none" type="text" value="SMA MADANI AL AZIZIYAH"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Tinggi Logo Display (Desktop)</label>
+<div class="flex items-center gap-space-sm">
+<input class="w-full accent-primary" max="64" min="32" type="range" value="40"/>
+<span class="font-code-md text-code-md px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">40px</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface-variant">Rasio Asli 1.00</span>
+<button class="px-space-md py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:bg-secondary-container transition-all" type="button">Simpan Identitas</button>
+</div>
+</div>
+</div>
+<!-- Operational Audit & Sticky Notice Strip -->
+<div class="p-space-sm rounded-lg bg-surface-container-low border-2 border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface">Konfigurasi Navbar tersimpan terakhir oleh <strong>Ust. H. Fauzan, S.Pd.I</strong> pada 24 Feb 2025 - 08:42 WIB.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="font-label-md text-label-md text-secondary underline hover:text-on-surface" href="#">Lihat Riwayat Revisi Menu (Git Snapshot)</a>
+</div>
+</div>
+</div></main></div></body></html>

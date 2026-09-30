@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#dae2fd", "surface-container-high": "#e2e7ff", outline: "#6d7a77", "on-primary": "#ffffff", "inverse-primary": "#6bd8cb", error: "#ba1a1a", "on-primary-fixed-variant": "#005049", "outline-variant": "#bcc9c6", "on-error": "#ffffff", "primary-container": "#008378", "primary-fixed": "#89f5e7", "on-error-container": "#93000a", "secondary-fixed-dim": "#b6c4ff", "tertiary-container": "#a36700", "inverse-on-surface": "#eef0ff", background: "#faf8ff", tertiary: "#825100", "on-tertiary": "#ffffff", "surface-container-low": "#f2f3ff", "surface-container": "#eaedff", "primary-fixed-dim": "#6bd8cb", "on-secondary-fixed-variant": "#264191", "secondary-container": "#8fa7fe", "on-secondary": "#ffffff", "on-surface-variant": "#3d4947", "tertiary-fixed-dim": "#ffb95f", primary: "#1E3A8A", "on-primary-fixed": "#00201d", "error-container": "#ffdad6", "on-secondary-fixed": "#00164e", "on-secondary-container": "#1d3989", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "on-tertiary-container": "#fffbff", "on-primary-container": "#f4fffc", "surface-tint": "#006a61", "surface-bright": "#faf8ff", surface: "#faf8ff", secondary: "#4059aa", "on-tertiary-fixed": "#2a1700", "secondary-fixed": "#dce1ff", "on-tertiary-fixed-variant": "#653e00", "surface-dim": "#d2d9f4", "inverse-surface": "#283044", "surface-container-lowest": "#ffffff", "on-surface": "#131b2e", "tertiary-fixed": "#ffddb8", "background-light": "#f6f6f8", "background-dark": "#121620"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-md": "0.75rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-lg": "1.25rem", margin: "1rem", gutter: "1rem"}, fontFamily: {"display-lg-mobile": ["Newsreader"], "title-md": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Newsreader"], "display-lg": ["Newsreader"], "body-md": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Newsreader"], "headline-md": ["Newsreader"], "code-md": ["Inter"], "label-sm": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Public Sans"]}, fontSize: {"display-lg-mobile": ["30px", {lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600"}], "headline-sm": ["18px", {lineHeight: "26px", fontWeight: "500"}], "display-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["13px", {lineHeight: "20px", fontWeight: "400"}], "body-sm": ["12px", {lineHeight: "18px", fontWeight: "400"}], "body-lg": ["15px", {lineHeight: "24px", fontWeight: "400"}], "headline-lg": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-md": ["22px", {lineHeight: "30px", fontWeight: "500"}], "code-md": ["12px", {lineHeight: "18px", fontWeight: "500"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "600"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col shadow-[2px_0_0_0_#dae2fd]"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-surface-container"><img alt="Minimalist academic crest logo for SMA Madani Al Aziziyah in deep sapphire navy and teal, geometric emblem with book and beacon motif.. Brand logo. - Primary color: #0d9488 - Font: newsreader - Mode: light - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VP4pHDm9UruNlxv_zESUBQIjI_HX_YGkiENUOZ_01mx3KU9V7P2VAmvVz_TIe8uC14-ktO74jgwqkHLaQApYwI0Dv2RlVuGLw7ywmnmG3SBNHnmhkjGKgQ44ixeI26oJHsOs3CokO_6Fe3qAtc2TqSlucjZf4Y2Ep_-b9B6Li2LT71RyFhjuWFEWDWIQVSxU8cPZhZ5GV09Qy8c9PWZ-uyjTtKmdLJLenIB1mi3tZ-lGHe61YPE2G7kiw"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">SMA Madani</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline truncate">Al Aziziyah Portal</span></div></div><div class="px-space-md py-space-sm border-b border-surface-container bg-surface-container-low"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface-variant">Sesi Akademik</span><span class="px-1.5 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md text-code-md font-bold">2024/2025</span></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[2px_2px_0px_#131b2e]"><div class="px-space-sm pt-space-xs pb-space-xs"><span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Role Portals</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="portal-wali-santri" href="#"><span class="material-symbols-outlined text-[18px]">family_restroom</span><span class="font-body-md text-body-md">Portal Wali Santri</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="portal-guru-asatidz" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Portal Guru &amp; Asatidz</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="portal-keuangan-mahad" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span class="font-body-md text-body-md">Biro Keuangan</span></a><div class="px-space-sm pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Layanan Santri</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tahfidz-halaqah" href="#"><span class="material-symbols-outlined text-[18px]">auto_stories</span><span class="font-body-md text-body-md">Tahfidz &amp; Halaqah</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="perizinan-santri" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-md text-body-md">Izin Sambangan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rekapitulasi-transaksi" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md">Buku Kas &amp; VA</span></a></nav><div class="p-space-md border-t border-surface-container bg-surface-container-lowest"><div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low"><div class="flex items-center gap-space-sm min-w-0"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><div class="truncate"><p class="font-label-sm text-label-sm font-bold text-on-surface truncate">Status Sistem</p><p class="font-code-md text-code-md text-outline truncate">Host BSI &amp; Mandiri OK</p></div></div><span class="material-symbols-outlined text-outline text-[16px]">verified</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_4px_rgba(19,27,46,0.06)] z-40 border-b border-surface-container flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><img alt="SMA Madani Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VP4pHDm9UruNlxv_zESUBQIjI_HX_YGkiENUOZ_01mx3KU9V7P2VAmvVz_TIe8uC14-ktO74jgwqkHLaQApYwI0Dv2RlVuGLw7ywmnmG3SBNHnmhkjGKgQ44ixeI26oJHsOs3CokO_6Fe3qAtc2TqSlucjZf4Y2Ep_-b9B6Li2LT71RyFhjuWFEWDWIQVSxU8cPZhZ5GV09Qy8c9PWZ-uyjTtKmdLJLenIB1mi3tZ-lGHe61YPE2G7kiw"/><div class="h-5 w-[1.5px] bg-outline-variant"></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portal-wali-santri" href="#">Wali Santri</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portal-guru-asatidz" href="#">Asatidz &amp; KBM</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portal-keuangan-mahad" href="#">Keuangan Ma'had</a></nav></div><div class="flex items-center gap-space-md"><div class="relative hidden sm:flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px]">search</span><input class="h-[38px] pl-8 pr-space-md bg-surface-container-low border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Cari NISN, Santri, Dokumen..." type="search"/></div><button aria-label="Notifikasi" class="w-[38px] h-[38px] rounded-DEFAULT bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Decorative Micro-Ticker -->
+<div class="bg-surface-container-low px-gutter-desktop py-space-xs flex flex-wrap items-center justify-between text-on-surface-variant text-label-sm font-label-sm border-b-2 border-surface-container">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1 font-semibold text-primary">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+        TAKWIM AKADEMIK AKTIF
+      </span>
+<span class="text-outline">/</span>
+<span>Semester Ganjil 1446 H / 2024-2025</span>
+<span class="text-outline">/</span>
+<span class="font-code-md text-code-md text-on-surface">Pekan Ke-11 (Mutaba'ah &amp; Persiapan UTS)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-code-md text-code-md text-outline">Kalender Hijriyyah: 14 Rabi'ul Awwal 1446 H</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md font-semibold text-label-sm">SINKRONISASI BIA-SIKAD: LIVE</span>
+</div>
+</div>
+<div class="p-gutter-desktop space-y-space-lg">
+<!-- Teacher Header Profile & Action Strip -->
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-[2px_2px_0px_#131b2e] border-2 border-surface-container">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-16 h-16 rounded-DEFAULT object-cover border-2 border-surface-container shadow-[2px_2px_0px_#131b2e]" data-alt="Portrait of an esteemed middle-aged Indonesian Islamic scholar and teacher wearing a pristine white songkok peci, tailored charcoal dark navy blazer, smiling warmly in a classical library interior with Islamic jurisprudence books on wooden shelves behind him, academic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzjQY0-GnO-rwchf64v5HFXYAduiKrShFn-6JJRGgJW6q6xen94EyaSTAOyjtcjWQLWI1r7kRedkBAXJ8LqwqZ5YeoAfePuCN-7g6OxgprKsUCyQnEmBaP0rxU4T9AQWmf-ckd6jhYexcFZj6eU-j7X11jxCro3odtyRBx4wV4N0RCOxAtan_3ltbRrmYONihmQn6sWZJ9ioDrE80O35g_tsTEBMDWTagHOr55GJbDYn4h4qFPeAXE"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-0.5 text-[14px] flex items-center justify-center border border-surface-container-lowest" title="Ustadz Pengampu Terverifikasi">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-0.5">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md text-label-sm font-semibold tracking-wide">ASATIDZ UTAMA</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-on-surface-variant font-code-md text-label-sm">NIP: 198402120092301</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-snug">
+              Assalamu'alaikum, Ust. Salman Al-Faris, Lc., M.Ag.
+            </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+<span class="font-semibold text-secondary">Kepala Bidang Tahfidz &amp; Pengampu Dirosah Islamiyyah (Fiqh Syafi'i)</span>
+<span class="text-outline">•</span>
+<span>Kelas Aktif:</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-DEFAULT font-code-md text-label-sm font-medium">XI-IPA 1 (Fiqh)</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-DEFAULT font-code-md text-label-sm font-medium">Halaqah Subuh A (12 Santri)</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-DEFAULT font-code-md text-label-sm font-medium">Halaqah Maghrib B (12 Santri)</span>
+</p>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+            Input Setoran Tahfidz
+          </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-DEFAULT border-2 border-surface-container-highest shadow-[2px_2px_0px_rgba(19,27,46,0.15)] hover:border-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">how_to_reg</span>
+            Mulai KBM &amp; Presensi
+          </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-DEFAULT border-2 border-surface-container-highest shadow-[2px_2px_0px_rgba(19,27,46,0.15)] hover:border-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">cloud_upload</span>
+            Upload Materi / Tugas
+          </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-DEFAULT border-2 border-surface-container-highest shadow-[2px_2px_0px_rgba(19,27,46,0.15)] hover:border-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">assessment</span>
+            Rekap Nilai Siswa
+          </button>
+</div>
+</div>
+</div>
+<!-- KPI 4 Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Santri Binaan</span>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">24</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Santri Halaqah</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-fixed flex items-center justify-center text-on-primary-fixed border border-primary">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+            100% Target On-Track
+          </span>
+<span class="font-code-md text-code-md text-outline">Subuh &amp; Maghrib</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Beban Mengajar (Minggu Ini)</span>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">18 JP</span>
+<span class="font-body-sm text-body-sm text-outline">/ 20 JP Rencana</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed border border-secondary">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant font-medium">
+<span>Realisasi KBM</span>
+<span class="font-code-md font-bold text-secondary">90% Selesai</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-DEFAULT overflow-hidden">
+<div class="h-full bg-secondary rounded-DEFAULT" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Rata-rata Nilai Fiqh</span>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">91.4</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md font-bold">A- (Mumtaz)</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-fixed-dim/30 flex items-center justify-center text-primary border border-primary">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Tuntas KKM: <strong class="text-on-surface">100%</strong></span>
+<span class="font-code-md text-code-md text-outline">Tertinggi: <strong class="text-on-surface">98.0</strong></span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline tracking-wider">Validasi Perizinan</span>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary">3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permohonan</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-DEFAULT bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed border border-tertiary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Perlu Tinjauan Segera
+          </span>
+<a class="font-code-md text-code-md text-secondary hover:underline font-bold" href="#">Buka Tab →</a>
+</div>
+</div>
+</div>
+<!-- Main Workspace Grid: Left Tahfidz Mutaba'ah, Right Agenda KBM & Presensi -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Halaqah Tahfidz & Jurnal Mutaba'ah (7 Cols) -->
+<section class="lg:col-span-7 space-y-space-md">
+<div class="bg-surface-container-lowest rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] overflow-hidden">
+<!-- Card Header & Filter Tab -->
+<div class="p-space-md border-b-2 border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Jurnal Halaqah &amp; Mutaba'ah Harian</h2>
+<p class="font-label-sm text-label-sm text-outline">Sabaq (Hafalan Baru), Sabqi &amp; Manzil Terjadwal</p>
+</div>
+</div>
+<!-- Session Selector Pills -->
+<div class="inline-flex rounded-DEFAULT border border-outline-variant bg-surface-container-lowest p-0.5 text-label-sm font-label-sm">
+<button class="px-space-sm py-1 rounded-DEFAULT bg-primary text-on-primary font-semibold" type="button">
+                Subuh A (12)
+              </button>
+<button class="px-space-sm py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface" type="button">
+                Maghrib B (12)
+              </button>
+</div>
+</div>
+<!-- Halaqah Summary Context Banner -->
+<div class="px-space-md py-space-sm bg-surface-container-high/40 border-b border-surface-container flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md text-code-md font-bold">SESI 14/09/2024</span>
+<span class="text-on-surface font-medium">Masjid Jami' Lantai 2 (Shaf Timur)</span>
+</div>
+<span class="font-code-md text-code-md text-primary font-bold">11 / 12 Santri Telah Setoran</span>
+</div>
+<!-- Mutaba'ah Live Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b-2 border-surface-container bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Santri &amp; NISN</th>
+<th class="py-2.5 px-space-sm">Sabaq Terkini</th>
+<th class="py-2.5 px-space-sm text-center">Status Mutaba'ah</th>
+<th class="py-2.5 px-space-sm text-center">Kelancaran</th>
+<th class="py-2.5 px-space-md text-right">Aksi Penilaian</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm">
+<!-- Row 1: Ahmad Ziyad Al-Farisi (Mumtaz Highlight) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-bold font-code-md flex items-center justify-center text-[12px]">
+                        AZ
+                      </div>
+<div>
+<div class="font-semibold text-on-surface">Ahmad Ziyad Al-Farisi</div>
+<div class="font-code-md text-code-md text-outline">NISN: 0078129401 • Kls XI-IPA 1</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-semibold text-on-surface">Juz 24</span>
+<div class="text-outline text-label-sm font-code-md">Surah Az-Zumar : 32-52</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md text-label-sm font-bold border border-primary">
+                      Mumtaz (A+)
+                    </span>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="font-headline-sm font-bold text-primary">98</span>
+<span class="text-outline text-label-sm block">Tajwid Fasih</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-DEFAULT border border-outline-variant font-medium" type="button">
+                      Detail Sabaq
+                    </button>
+</td>
+</tr>
+<!-- Row 2: Muhammad Rayhan (Perlu Muraja'ah Highlight) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-tertiary-fixed/10">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold font-code-md flex items-center justify-center text-[12px]">
+                        MR
+                      </div>
+<div>
+<div class="font-semibold text-on-surface flex items-center gap-1.5">
+                          Muhammad Rayhan
+                          <span class="w-2 h-2 rounded-full bg-tertiary" title="Perhatian Khusus"></span>
+</div>
+<div class="font-code-md text-code-md text-outline">NISN: 0079321488 • Kls XI-IPA 1</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-semibold text-on-surface">Juz 18</span>
+<div class="text-outline text-label-sm font-code-md">Surah Al-Mu'minun : 1-22</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-code-md text-label-sm font-bold border border-tertiary">
+                      Perlu Muraja'ah
+                    </span>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="font-headline-sm font-bold text-tertiary">78</span>
+<span class="text-tertiary text-label-sm block font-medium">Ulang 1 Ruku'</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-DEFAULT border border-on-surface shadow-[1px_1px_0px_#131b2e]" type="button">
+                      Uji Ulang
+                    </button>
+</td>
+</tr>
+<!-- Row 3: Farhan Dzaki (Lancar Highlight) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold font-code-md flex items-center justify-center text-[12px]">
+                        FD
+                      </div>
+<div>
+<div class="font-semibold text-on-surface">Farhan Dzaki Nugroho</div>
+<div class="font-code-md text-code-md text-outline">NISN: 0081045239 • Kls XI-IPA 1</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-semibold text-on-surface">Juz 12</span>
+<div class="text-outline text-label-sm font-code-md">Surah Yusuf : 53-70</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-code-md text-label-sm font-bold border border-secondary">
+                      Jayyid Jiddan
+                    </span>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="font-headline-sm font-bold text-on-surface">89</span>
+<span class="text-outline text-label-sm block">Waqaf &amp; Ibtida' OK</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-DEFAULT border border-outline-variant font-medium" type="button">
+                      Detail Sabaq
+                    </button>
+</td>
+</tr>
+<!-- Row 4: Bilal Ramadhan (Selesai Setoran) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface font-bold font-code-md flex items-center justify-center text-[12px]">
+                        BR
+                      </div>
+<div>
+<div class="font-semibold text-on-surface">Bilal Ramadhan</div>
+<div class="font-code-md text-code-md text-outline">NISN: 0082219033 • Kls XI-IPA 1</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-semibold text-on-surface">Juz 15</span>
+<div class="text-outline text-label-sm font-code-md">Surah Al-Isra' : 70-98</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-code-md text-label-sm font-bold border border-primary">
+                      Mumtaz (A)
+                    </span>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="font-headline-sm font-bold text-primary">94</span>
+<span class="text-outline text-label-sm block">Ghunnah Tartil</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-DEFAULT border border-outline-variant font-medium" type="button">
+                      Detail Sabaq
+                    </button>
+</td>
+</tr>
+<!-- Row 5: Thariq Aziz (Menunggu Input) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/50">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline font-bold font-code-md flex items-center justify-center text-[12px]">
+                        TA
+                      </div>
+<div>
+<div class="font-semibold text-on-surface">Thariq Aziz Maulana</div>
+<div class="font-code-md text-code-md text-outline">NISN: 0083049182 • Kls XI-IPA 1</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-medium text-outline">Juz 21 (Sabaq Baru)</span>
+<div class="text-outline text-label-sm font-code-md">Target: Al-Ankabut : 46</div>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-surface-container text-outline font-code-md text-label-sm font-semibold">
+                      Belum Setor
+                    </span>
+</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="text-outline font-code-md text-code-md">-</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-2.5 py-1 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm rounded-DEFAULT border border-primary font-bold hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                      Input Setor
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Footer Action Strip -->
+<div class="p-space-md border-t-2 border-surface-container bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span>
+<span>Perubahan otomatis tersinkron ke buku mutaba'ah wali santri.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-DEFAULT border border-outline-variant hover:bg-surface-container" type="button">
+                Ekspor Ledger PDF
+              </button>
+<button class="px-space-lg py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all flex items-center gap-1.5 font-bold" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+                Simpan Jurnal Halaqah Hari Ini
+              </button>
+</div>
+</div>
+</div>
+<!-- Academic Material & Visual Resource Panel -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e]">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">library_books</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Silabus Fiqh Syafi'i (Kitab Fathul Qorib)</h3>
+</div>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-code-md text-label-sm font-semibold">Bab Thaharah &amp; Shalat</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm mt-space-md">
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div>
+<span class="font-code-md text-code-md text-outline uppercase font-semibold">Fasal 04</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Syarat Sah &amp; Rukun Shalat</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kajian matan hal. 22-26 dengan komparasi fatwa kontemporer madzhab.</p>
+</div>
+<div class="mt-space-md flex items-center justify-between text-label-sm">
+<span class="text-primary font-semibold font-code-md">PDF • 4.2 MB</span>
+<button class="text-secondary font-semibold hover:underline" type="button">Buka Diktat</button>
+</div>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low border border-surface-container flex flex-col justify-between">
+<div>
+<span class="font-code-md text-code-md text-outline uppercase font-semibold">Fasal 05</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Sujud Sahwi &amp; Tilawah</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Studi kasus kekeliruan raka'at, bacaan masbuq, dan tata cara sujud.</p>
+</div>
+<div class="mt-space-md flex items-center justify-between text-label-sm">
+<span class="text-primary font-semibold font-code-md">PPTX • 8.1 MB</span>
+<button class="text-secondary font-semibold hover:underline" type="button">Buka Slide</button>
+</div>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-high/60 border border-primary/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md text-primary uppercase font-bold">Bank Soal UTS</span>
+<span class="px-1.5 py-0.2 bg-tertiary-fixed text-on-tertiary-fixed rounded text-[10px] font-code-md font-bold">DRAFT</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Paket Soal UTS Fiqh XI</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">30 Pilihan Ganda Analisis + 5 Soal Uraian Studi Masail Fiqhiyyah.</p>
+</div>
+<div class="mt-space-md flex items-center justify-between text-label-sm">
+<span class="text-tertiary font-semibold font-code-md">Tenggat: H-3</span>
+<button class="px-2 py-1 bg-primary text-on-primary rounded-DEFAULT text-label-sm font-semibold" type="button">Edit Soal</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Jadwal KBM, Presensi Instan & Notifikasi (5 Cols) -->
+<section class="lg:col-span-5 space-y-space-md">
+<!-- Agenda KBM Hari Ini -->
+<div class="bg-surface-container-lowest rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] p-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b-2 border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">event_note</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Jadwal KBM Hari Ini</h2>
+</div>
+<span class="font-code-md text-code-md text-on-surface-variant font-semibold">Kamis, 14 Sep 2024</span>
+</div>
+<!-- Schedule Timeline List -->
+<div class="mt-space-md space-y-space-sm">
+<!-- Item 1: Selesai -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low border-l-4 border-l-outline border-r border-t border-b border-surface-container flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md font-bold text-outline">07.30 - 09.00 WIB</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-surface-container text-outline font-label-sm text-[10px] font-bold uppercase">Selesai</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1">Fiqh Syafi'i (Kitab Fathul Qorib)</h4>
+<div class="flex items-center gap-2 text-label-sm text-outline font-label-sm mt-0.5">
+<span>Kelas XI-IPA 1</span>
+<span>•</span>
+<span>Ruang Baitul Hikmah</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]" title="KBM dan Presensi Telah Dikirim">check_circle</span>
+</div>
+<!-- Item 2: Sedang Berlangsung / Aktif -->
+<div class="p-space-sm rounded-DEFAULT bg-primary-fixed/20 border-l-4 border-l-primary border-r border-t border-b border-primary/40 shadow-[2px_2px_0px_#00685f] flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md font-bold text-primary">09.30 - 11.00 WIB</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.2 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-[10px] font-bold uppercase animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary inline-block"></span>
+                    Aktif KBM
+                  </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mt-1">Hadits Tematik &amp; Musthalah</h4>
+<div class="flex items-center gap-2 text-label-sm text-on-surface-variant font-label-sm mt-0.5">
+<span class="font-semibold text-secondary">Kelas X-A</span>
+<span>•</span>
+<span>Lab Bahasa &amp; Multimedia</span>
+</div>
+</div>
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-DEFAULT border border-on-surface shadow-[1px_1px_0px_#131b2e] font-semibold hover:bg-primary-container" type="button">
+                Buka Kelas
+              </button>
+</div>
+<!-- Item 3: Terjadwal Sore -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-lowest border-l-4 border-l-secondary border-r border-t border-b border-surface-container flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md font-bold text-secondary">16.00 - 17.30 WIB</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold uppercase">Terjadwal</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1">Halaqah Tahfidz Sore (Sabqi)</h4>
+<div class="flex items-center gap-2 text-label-sm text-outline font-label-sm mt-0.5">
+<span>Halaqah Maghrib B</span>
+<span>•</span>
+<span>Masjid Jami' Lantai 2</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">more_time</span>
+</div>
+</div>
+</div>
+<!-- Widget Presensi Instan Kelas Aktif (Kelas X-A) -->
+<div class="bg-surface-container-lowest rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] p-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">how_to_reg</span>
+<h3 class="font-title-md text-title-md text-on-surface">Presensi Cepat: Hadits Tematik (Kelas X-A)</h3>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Total Siswa Terdaftar: 24 Siswa</p>
+</div>
+<span class="font-code-md text-code-md text-primary font-bold">Terkonfirmasi: 24/24</span>
+</div>
+<!-- Counter Box Metrics -->
+<div class="grid grid-cols-4 gap-space-xs mt-space-sm">
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center border border-surface-container">
+<span class="font-code-md text-label-sm text-outline block uppercase font-bold">Hadir (H)</span>
+<span class="font-headline-sm font-bold text-primary">23</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center border border-surface-container">
+<span class="font-code-md text-label-sm text-outline block uppercase font-bold">Izin (I)</span>
+<span class="font-headline-sm font-bold text-secondary">1</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center border border-surface-container">
+<span class="font-code-md text-label-sm text-outline block uppercase font-bold">Sakit (S)</span>
+<span class="font-headline-sm font-bold text-tertiary">0</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center border border-surface-container">
+<span class="font-code-md text-label-sm text-outline block uppercase font-bold">Alpa (A)</span>
+<span class="font-headline-sm font-bold text-error">0</span>
+</div>
+</div>
+<!-- Instant Toggle Note -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded-DEFAULT border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">info</span>
+<span class="font-body-sm text-body-sm text-on-surface">1 Santri Izin: <strong>M. Fakhri</strong> (Pemeriksaan Klinik Ma'had).</span>
+</div>
+<button class="text-secondary font-label-sm font-bold text-label-sm hover:underline" type="button">
+              Ubah Status
+            </button>
+</div>
+<!-- Quick Submission Button -->
+<div class="mt-space-sm">
+<button class="w-full py-2 bg-secondary text-on-secondary font-label-md text-label-md rounded-DEFAULT border-2 border-on-surface shadow-[2px_2px_0px_#131b2e] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all flex items-center justify-center gap-1.5 font-bold" type="button">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+              Kunci &amp; Kirim Presensi Kelas X-A ke Wali Kelas
+            </button>
+</div>
+</div>
+<!-- Kotak Notifikasi Kurikulum & Akademik -->
+<div class="bg-surface-container-lowest rounded-DEFAULT border-2 border-surface-container shadow-[2px_2px_0px_#131b2e] p-space-md">
+<div class="flex items-center gap-space-xs pb-space-xs border-b border-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[20px]">notifications_active</span>
+<h3 class="font-title-md text-title-md text-on-surface">Notifikasi Kurikulum &amp; Ma'had</h3>
+</div>
+<div class="mt-space-sm space-y-space-sm">
+<!-- Warning Item: UTS Submission Deadline -->
+<div class="p-space-sm rounded-DEFAULT bg-tertiary-fixed/20 border-l-4 border-l-tertiary border-r border-t border-b border-tertiary/40">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase tracking-wider block">BATAS WAKTU PENGUNGGAHAN SOAL UTS</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 font-medium">
+                    Biro Akademik mengingatkan batas akhir unggah naskah soal UTS mata pelajaran Fiqh &amp; Hadits tersisa <strong class="text-tertiary">3 hari kalender</strong>.
+                  </p>
+</div>
+<span class="px-1.5 py-0.5 bg-tertiary text-on-tertiary rounded font-code-md text-[11px] font-bold">H-3</span>
+</div>
+<div class="mt-2 flex items-center justify-end gap-2">
+<a class="font-label-sm text-label-sm text-tertiary font-bold hover:underline" href="#">Template Kisi-kisi .DOCX</a>
+<span class="text-outline">•</span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">Upload Sekarang →</a>
+</div>
+</div>
+<!-- Notice Item: Dewan Asatidz Meeting -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low border border-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">campaign</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface block">Rapat Pleno Evaluasi Mutaba'ah Triwulan</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Sabtu malam ba'da Isya di Aula Ibnu Rusyd bersama Mudir Ma'had &amp; Pengasuhan Santri.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>
