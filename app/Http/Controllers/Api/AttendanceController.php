@@ -15,7 +15,7 @@ class AttendanceController extends Controller
     public function index(int $scheduleId, Request $request)
     {
         $schedule = Schedule::findOrFail($scheduleId);
-        $this->authorize('view', $schedule);
+        $this->authorize('viewAttendance', $schedule);
 
         return $this->service->listBySchedule($scheduleId, $request->query('date'));
     }
@@ -23,7 +23,7 @@ class AttendanceController extends Controller
     public function sheet(int $scheduleId, Request $request)
     {
         $schedule = Schedule::findOrFail($scheduleId);
-        $this->authorize('view', $schedule);
+        $this->authorize('viewAttendance', $schedule);
 
         return $this->service->sheet($scheduleId, $request->query('date', date('Y-m-d')));
     }
@@ -31,7 +31,7 @@ class AttendanceController extends Controller
     public function store(int $scheduleId, UpsertAttendanceRequest $request)
     {
         $schedule = Schedule::findOrFail($scheduleId);
-        $this->authorize('store', $schedule);
+        $this->authorize('storeAttendance', $schedule);
         $this->service->upsertMany($scheduleId, $request->query('date', date('Y-m-d')), $request->validated()['rows']);
 
         return response()->noContent();
