@@ -25,3 +25,7 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+akun.md
+api.txt
+*.sql.gz
+/storage/framework/testing/
