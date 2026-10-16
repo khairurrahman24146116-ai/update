@@ -29,6 +29,10 @@ import BeritaDetail from './Pages/BeritaDetail.vue'
 import GaleriDetail from './Pages/GaleriDetail.vue'
 import BeritaList from './Pages/BeritaList.vue'
 import GaleriList from './Pages/GaleriList.vue'
+import LpiBeranda from './Pages/Lpi/LpiBeranda.vue'
+import LpiTentang from './Pages/Lpi/LpiTentang.vue'
+import LpiProgram from './Pages/Lpi/LpiProgram.vue'
+import LpiLayanan from './Pages/Lpi/LpiLayanan.vue'
 
 const roleMap = { admin: '/app/admin', guru: '/app/guru', bendahara: '/app/bendahara', wali_murid: '/app/wali-murid' }
 function currentRole() {
@@ -46,6 +50,10 @@ const routes = [
     { path: '/galeri', component: GaleriList },
     { path: '/berita/:id', component: BeritaDetail },
     { path: '/galeri/:id', component: GaleriDetail },
+    { path: '/lpi', component: LpiBeranda },
+    { path: '/lpi/tentang', component: LpiTentang },
+    { path: '/lpi/program', component: LpiProgram },
+    { path: '/lpi/layanan', component: LpiLayanan },
     { path: '/login', component: Login, meta: { guestOnly: true } },
     { path: '/app', redirect: () => roleMap[currentRole()] || '/' },
     { path: '/app/admin', component: AdminDashboard, meta: { requiresAuth: true, role: 'admin' } },
@@ -72,6 +80,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to) {
+    if (to.hash) return { el: to.hash, top: 96, behavior: 'smooth' }
+    return { top: 0 }
+  },
 })
 router.beforeEach((to) => {
   const token = localStorage.getItem('madani_token')

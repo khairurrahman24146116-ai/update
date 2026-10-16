@@ -211,7 +211,7 @@ body { font-family: var(--font-sans); }
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
-  src: url('/fonts/material-symbols-outlined.woff2') format('woff2');
+  src: url('../fonts/material-symbols-outlined.woff2') format('woff2');
 }
 
 .material-symbols-outlined {
@@ -233,8 +233,6 @@ body { font-family: var(--font-sans); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 .font-display { font-family: var(--font-display); }

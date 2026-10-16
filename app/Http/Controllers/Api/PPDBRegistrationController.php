@@ -3,23 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePPDBRegistrationRequest;
 use App\Models\PPDBRegistration;
 use App\Models\PPDBWave;
 use App\Services\ActivityLogger;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PPDBRegistrationController extends Controller
 {
-    public function publicStore(Request $request)
+    public function publicStore(StorePPDBRegistrationRequest $request)
     {
-        $v = $request->validate([
-            'wave_id' => 'required|exists:p_p_d_b_waves,id',
-            'name' => 'required|string|max:255',
-            'nisn' => 'nullable|string|max:20',
-            'phone' => 'nullable|string|max:20',
-            'email' => 'nullable|email|max:255',
-            'address' => 'nullable|string|max:1000',
-        ]);
+        $v = $request->validated();
         $wave = PPDBWave::findOrFail($v['wave_id']);
         if (! $wave->is_public || $wave->status !== 'buka') {
             return response()->json(['message' => 'Gelombang tidak tersedia untuk pendaftaran'], 422);
@@ -30,9 +25,51 @@ class PPDBRegistrationController extends Controller
         if ($wave->end_date && now()->gt($wave->end_date)) {
             return response()->json(['message' => 'Pendaftaran sudah ditutup'], 422);
         }
-        $reg = PPDBRegistration::create(array_merge($v, ['status' => 'pending']));
 
-        return response()->json($reg, 201);
+        $data = collect($v)->except(['photo', 'consent'])->toArray();
+        $data['status'] = 'pending';
+        $data['declaration_date'] = now()->toDateString();
+        $data['consent_at'] = now();
+
+        $reg = DB::transaction(function () use ($request, $data, $wave) {
+            if ($request->hasFile('photo')) {
+                $data['photo_path'] = $request->file('photo')->store('ppdb/photos', 'public');
+            }
+            $data['registration_number'] = $this->generateNumber($wave);
+            $model = new PPDBRegistration;
+            foreach ($data as $k => $val) {
+                if ($k === 'medical_history' && is_array($val)) {
+                    $model->{$k} = $val;
+                } else {
+                    $model->{$k} = $val;
+                }
+            }
+            $model->save();
+
+            return $model;
+        });
+
+        return response()->json([
+            'registration_number' => $reg->registration_number,
+            'name' => $reg->name,
+            'wave' => ['id' => $wave->id, 'name' => $wave->name, 'slug' => $wave->slug],
+            'registered_at' => $reg->created_at,
+            'status' => $reg->status,
+        ], 201);
+    }
+
+    private function generateNumber(PPDBWave $wave): string
+    {
+        $year = now()->format('Y');
+        $prefix = 'PPDB-'.$year.'-'.str_pad((string) $wave->id, 3, '0', STR_PAD_LEFT);
+        $seq = PPDBRegistration::where('wave_id', $wave->id)->count() + 1;
+        $number = $prefix.'-'.str_pad((string) $seq, 4, '0', STR_PAD_LEFT);
+        while (PPDBRegistration::where('registration_number', $number)->exists()) {
+            $seq++;
+            $number = $prefix.'-'.str_pad((string) $seq, 4, '0', STR_PAD_LEFT);
+        }
+
+        return $number;
     }
 
     public function index(Request $request)
